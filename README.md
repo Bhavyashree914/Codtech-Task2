@@ -1,3 +1,15 @@
+Name:Bhavyashree H V
+
+Company:CODTECH solutions
+
+Intern ID :CT6WDS2654
+
+Domain:Python Programming
+
+Duration:Neela Santhosh Kumar
+
+Mentor:Muzammil Ahmed
+
 
 Project Overview: Student Grades Manager
 
@@ -22,7 +34,11 @@ Grade Entry:
 
 Users can input grades for multiple subjects or assignments.
 Validation ensures grades are within the range of 0 to 100.
+
+
 Performance Metrics:
+
+
 Calculates the average grade.
 Converts the average to a letter grade (A, B, C, etc.).
 Computes the GPA on a 4.0 scale.
@@ -42,15 +58,24 @@ Menu Options:
 Users choose between adding grades, viewing overall performance, or exiting the program.
 Data Collection:
 Users enter subject/assignment names and corresponding grades.
+
 Calculations:
+
 The program calculates the average, letter grade, and GPA based on entered grades.
+
+
 Display Results:
+
 Outputs a detailed performance summary and individual grades.
+
 Learning Outcomes:
 Data Handling: Demonstrates collection, storage, and processing of user data (grades).
+
 Validation and Error Handling:
 Ensures grades are numeric and within a valid range.
 Handles invalid menu choices gracefully.
+
+
 Control Flow:
 Implements a menu-driven system for user interaction.
 
