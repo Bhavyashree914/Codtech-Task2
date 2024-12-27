@@ -1,0 +1,79 @@
+
+# Student Grades Manager Program
+def calculate_letter_grade(average):
+    if average >= 90:
+        return 'A'
+    elif average >= 80:
+        return 'B'
+    elif average >= 70:
+        return 'C'
+    elif average >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+def calculate_gpa(average):
+    if average >= 90:
+        return 4.0
+    elif average >= 80:
+        return 3.0
+    elif average >= 70:
+        return 2.0
+    elif average >= 60:
+        return 1.0
+    else:
+        return 0.0
+
+def main():
+    print("Welcome to the Student Grades Manager!")
+    grades = {}
+
+    while True:
+        print("\nMenu:")
+        print("1. Add grade for a subject/assignment")
+        print("2. Calculate and display average, letter grade, and GPA")
+        print("3. Exit")
+
+        choice = input("Enter your choice (1/2/3): ")
+
+        if choice == '1':
+            subject = input("Enter the subject or assignment name: ")
+            try:
+                grade = float(input(f"Enter the grade for {subject}: "))
+                if 0 <= grade <= 100:
+                    grades[subject] = grade
+                    print(f"Grade for {subject} added successfully.")
+                else:
+                    print("Grade must be between 0 and 100.")
+            except ValueError:
+                print("Invalid input. Please enter a numeric value.")
+
+        elif choice == '2':
+            if grades:
+                total = sum(grades.values())
+                count = len(grades)
+                average = total / count
+
+                letter_grade = calculate_letter_grade(average)
+                gpa = calculate_gpa(average)
+
+                print("\nOverall Performance:")
+                print(f"Average Grade: {average:.2f}")
+                print(f"Letter Grade: {letter_grade}")
+                print(f"GPA: {gpa:.2f}")
+
+                print("\nDetailed Grades:")
+                for subject, grade in grades.items():
+                    print(f"{subject}: {grade:.2f}")
+            else:
+                print("No grades have been entered yet.")
+
+        elif choice == '3':
+            print("Exiting the program. Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
